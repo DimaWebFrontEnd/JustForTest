@@ -1,0 +1,57 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+main {
+   display: flex;
+   justify-content: center;
+}
+
+#right,
+#left {
+   position: absolute;
+   padding: 15px;
+   background-color: green;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 1;
+   cursor: pointer;
+}
+
+#right {
+   right: 0;
+}
+
+.carousel-wrap {
+   margin-top: 300px;
+   width: 90%;
+   /* overflow: hidden; */
+   border: 2px solid;
+   position: relative;
+}
+
+.carousel {
+   display: flex;
+   scroll-behavior: smooth;
+   overflow: hidden;
+}
+
+.carousel.dragging {
+   scroll-behavior: auto;
+   cursor: grab;
+}
+
+.carousel div {
+   min-width: 200px;
+   height: 200px;
+   background-color: aqua;
+   margin-inline: 10px;
+   border: 2px solid;
+}
+
+.carousel div:nth-child(2n) {
+   background-color: dodgerblue;
+}
